@@ -8,7 +8,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
+
+  h2 {
+    @extend .young-serif-regular;
+    color: hsl(14, 45%, 36%);
+  }
 }
 
 //Fuente de letra .. googlefont
@@ -30,7 +35,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.9375rem;
   width: 31.875rem;
-  height: 43.75rem;
+  height: 100%;
   margin: 1.875rem;
   padding: 1.875rem;
   display: flex;
@@ -45,7 +50,6 @@ body {
   }
 
   h1 {
-    /*text-align: left;*/
     @extend .young-serif-regular;
     font-size: 1.9375rem;
   }
@@ -60,20 +64,84 @@ body {
 
 .section-1 {
   background-color: hsl(330, 100%, 98%);
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
   @extend .outfit;
 
-  h3{
-    color: hsl(24, 5%, 18%)
+  h3 {
+    color: hsl(332, 51%, 32%);
   }
 
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-left: 20px;
+    gap: 0.625rem;
+    margin-left: 1.25rem;
+  }
+
+  li {
+    font-size: 0.79rem;
+    color: gray;
+    font-weight: 500;
+    padding-left: 1.25rem;
+  }
+
+  //falta el color del span
+  span {
+    color: hsl(24, 5%, 18%);
+    font-weight: 700;
+  }
+}
+
+.secion-2 {
+  @extend .outfit;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-left: 1.25rem;
+  }
+
+  li {
+    font-size: 0.79rem;
+    color: gray;
+    font-weight: 500;
+    gap: 0.9375rem;
+  }
+}
+
+.secion-3 {
+  @extend .outfit;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-left: 1.25rem;
+    list-style: none;
+    counter-reset: contador1;
+  }
+
+  li {
+    font-size: 0.79rem;
+    color: gray;
+    font-weight: 500;
+    gap: 0.9375rem;
+    counter-increment: contador1;
+  }
+
+  ol li::before {
+    content: counter(contador1) ". ";
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
   }
 }

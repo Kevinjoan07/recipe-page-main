@@ -8,16 +8,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
+}
+body h2 {
+  color: hsl(14, 45%, 36%);
 }
 
-.young-serif-regular, .contenedor h1 {
+.young-serif-regular, .contenedor h1, body h2 {
   font-family: "Young Serif", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.outfit, .section-1, .contenedor p {
+.outfit, .secion-3, .secion-2, .section-1, .contenedor p {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -28,7 +31,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.9375rem;
   width: 31.875rem;
-  height: 43.75rem;
+  height: 100%;
   margin: 1.875rem;
   padding: 1.875rem;
   display: flex;
@@ -42,7 +45,6 @@ body {
   border-radius: 0.625rem;
 }
 .contenedor h1 {
-  /*text-align: left;*/
   font-size: 1.9375rem;
 }
 .contenedor p {
@@ -53,19 +55,73 @@ body {
 
 .section-1 {
   background-color: hsl(330, 100%, 98%);
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .section-1 h3 {
-  color: hsl(24, 5%, 18%);
+  color: hsl(332, 51%, 32%);
 }
 .section-1 ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-left: 20px;
+  gap: 0.625rem;
+  margin-left: 1.25rem;
+}
+.section-1 li {
+  font-size: 0.79rem;
+  color: gray;
+  font-weight: 500;
+  padding-left: 1.25rem;
+}
+.section-1 span {
+  color: hsl(24, 5%, 18%);
+  font-weight: 700;
+}
+
+.secion-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.secion-2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-left: 1.25rem;
+}
+.secion-2 li {
+  font-size: 0.79rem;
+  color: gray;
+  font-weight: 500;
+  gap: 0.9375rem;
+}
+
+.secion-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.secion-3 ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-left: 1.25rem;
+  list-style: none;
+  counter-reset: contador1;
+}
+.secion-3 li {
+  font-size: 0.79rem;
+  color: gray;
+  font-weight: 500;
+  gap: 0.9375rem;
+  counter-increment: contador1;
+}
+.secion-3 ol li::before {
+  content: counter(contador1) ". ";
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
